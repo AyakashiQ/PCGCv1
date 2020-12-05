@@ -4,7 +4,6 @@
 import tensorflow as tf 
 import numpy as np
 from tensorflow.contrib.coder.python.ops import coder_ops
-from tensorflow
 
 class EntropyBottleneck(tf.keras.layers.Layer):
   """The layer implements a flexible probability density model to estimate
