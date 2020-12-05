@@ -112,7 +112,7 @@ def eval(data, batch_size):
 
     points_nums = tf.cast(tf.reduce_sum(x, axis=(1,2,3,4)), 'int32')
     output = select_voxels(x_tilde, points_nums, 1.0)
-    output = output.numpy()
+    # output = output.numpy()
     _, _, IoU = get_classify_metrics(output, x)
 
     bpps = bpps + train_bpp_ae
