@@ -40,9 +40,9 @@ def generate_dataset(INPUT_DIR, OUTPUT_DIR, DATA_NUM, cube_size=64):
 
 if __name__ == "__main__":
     VOXEL_SIZE = 64
-    DATA_DIR = '/home/ubuntu/HardDisk1/geometry_training_datasets/shapenet_points255/shapenet_points255_part2/'
+    DATA_DIR = '/data1/qzz/dataset/KITTI/pcgc/kitti_3_point255/'
     print('data direction:', DATA_DIR)
-    OUTPUT_DIR ='/home/ubuntu/HardDisk1/points'+str(VOXEL_SIZE)
+    OUTPUT_DIR ='/data1/qzz/dataset/KITTI/pcgc/points'+str(VOXEL_SIZE)
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
     DATA_NUM = 1e6
