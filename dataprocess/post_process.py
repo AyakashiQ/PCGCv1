@@ -50,7 +50,7 @@ def select_voxels(vols, points_nums, offset_ratio=1.0, init_thres=-2.0):
     '''
     vols = vols.numpy()
     points_nums = points_nums
-    offset_ratio = offset_ratio
+    offset_ratio = int(offset_ratio)
 
     masks = []
 
