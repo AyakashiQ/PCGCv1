@@ -87,7 +87,7 @@ else:
 
 
 
-file_list = sorted(glob.glob('/home/ubuntu/HardDisk1/geometry_training_datasets/points64/points64_part1/'+'*.h5'))
+file_list = sorted(glob.glob('/data1/qzz/dataset/KITTI/pcgc/points64/'+'*.h5'))
 print('numbers of training data: ', len(file_list))
 
 def eval(data, batch_size):
