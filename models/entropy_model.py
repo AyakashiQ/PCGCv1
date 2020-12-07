@@ -215,6 +215,7 @@ class EntropyBottleneck(tf.keras.layers.Layer):
     pmf = likelihood
     
     # pmf to cdf.
+    print(tf.shape(pmf))
     cdf = coder_ops.pmf_to_quantized_cdf(pmf, precision=self._range_coder_precision)
     cdf = tf.reshape(cdf, [1, channels, -1])
 
