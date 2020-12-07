@@ -100,6 +100,7 @@ def compress(cubes, model, ckpt_dir):
   status = checkpoint.restore(tf.train.latest_checkpoint(ckpt_dir))
 
   x = tf.convert_to_tensor(cubes, "float32")
+  print(tf.shape(x))
 
   def loop_analysis(x):
     x = tf.expand_dims(x, 0)
