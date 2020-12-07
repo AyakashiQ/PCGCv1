@@ -99,7 +99,7 @@ def compress(cubes, model, ckpt_dir):
                                     estimator=entropy_bottleneck)
   status = checkpoint.restore(tf.train.latest_checkpoint(ckpt_dir))
 
-  x = tf.convert_to_tensor(cubes, dtype=tf.float32)
+  x = tf.convert_to_tensor(cubes, "float32")
   print(tf.shape(x))
 
   def loop_analysis(x):
@@ -108,7 +108,7 @@ def compress(cubes, model, ckpt_dir):
     return tf.squeeze(y)
 
   start = time.time()
-  ys = tf.map_fn(loop_analysis, x, dtype=tf.float32, parallel_iterations=2, back_prop=False)
+  ys = tf.map_fn(loop_analysis, x, dtype=tf.float32, parallel_iterations=1, back_prop=False)
   print("Analysis Transform: {}s".format(round(time.time()-start, 4)))
 
   start = time.time()
