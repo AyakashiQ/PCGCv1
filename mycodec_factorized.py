@@ -105,7 +105,7 @@ def compress(cubes, model, ckpt_dir):
   def loop_analysis(x):
     x = tf.expand_dims(x, 0)
     y = analysis_transform(x)
-    return tf.squeeze(y)
+    return tf.squeeze(y, 0)
 
   start = time.time()
   ys = tf.map_fn(loop_analysis, x, dtype=tf.float32, parallel_iterations=1, back_prop=False)
