@@ -266,10 +266,6 @@ if __name__ == "__main__":
   """
 
   args = parse_args()
-  if args.gpu==1:
-    os.environ['CUDA_VISIBLE_DEVICES']="0"
-  else:
-    os.environ['CUDA_VISIBLE_DEVICES']=""
   config = tf.ConfigProto()
   config.gpu_options.per_process_gpu_memory_fraction = 1.0
   config.gpu_options.allow_growth = True
