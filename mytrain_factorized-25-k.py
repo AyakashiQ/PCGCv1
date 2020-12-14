@@ -55,7 +55,7 @@ print(args)
 
 # Define parameters.
 BATCH_SIZE = args.batch_size
-DISPLAY_STEP = 10
+DISPLAY_STEP = 1000
 SAVE_STEP = 4000
 RATIO_EVAL = 10 #
 NUM_ITEATION = 3e5 
